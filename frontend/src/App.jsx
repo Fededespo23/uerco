@@ -22,7 +22,7 @@ export default function App() {
   const fetchScores = async () => {
     setLoading(true);
     try {
-      const res = await fetch("https://TUO_BACKEND_URL.onrender.com/scores");
+      const res = await fetch("https://uerco.onrender.com");
       const data = await res.json();
       setScores(data);
     } catch (err) {
