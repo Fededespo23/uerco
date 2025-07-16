@@ -50,21 +50,22 @@ function App() {
     );
   }
 
-  return (
-    <div style={{ maxWidth: 700, margin: "auto", padding: 20 }}>
-      <h1>Dashboard Macro Trading</h1>
-      <button onClick={fetchScores} disabled={loading}>
-        {loading ? "Caricamento..." : "Aggiorna Score"}
-      </button>
-      <ul>
-        {scores.map((s, i) => (
+ return (
+  <div>
+    <h1>Dashboard Macro Trading</h1>
+    <ul>
+      {Array.isArray(scores) ? (
+        scores.map((s, i) => (
           <li key={i}>
             {s.asset}: {s.score}%
           </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
+        ))
+      ) : (
+        <li>Nessun dato disponibile</li>
+      )}
+    </ul>
+  </div>
+);
+
 
 export default App;
