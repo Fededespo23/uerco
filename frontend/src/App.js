@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import "./App.css";
 
-const PASSWORD = "miaPassword123";
+const PASSWORD = "Uercodios23";
 
 function App() {
   const [input, setInput] = useState("");
